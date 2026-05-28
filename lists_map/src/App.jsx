@@ -1,3 +1,5 @@
+import ProductList from "./components/ProductList";
+import UserList from "./components/UserList";
 import usersInfo from "./userInfo";
 export default function App() {
   return (
@@ -9,6 +11,13 @@ export default function App() {
           <li>{location}</li>
         </ul>
       ))}
+
+      <h1>===================================================</h1>
+
+      <UserList />
+
+      <h1>===================================================</h1>
+      <ProductList />
     </main>
   );
 }
