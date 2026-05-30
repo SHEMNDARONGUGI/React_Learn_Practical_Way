@@ -13,7 +13,7 @@ const App = () => {
         hobbies={["coding", "reading", "cycling"]}
       />
       <Person name="Scholastica" age={30} />
-      <Product name="Canon 70D" price="Ksh: 35,000" />
+      <Product name="Canon 70D" price={35000} />
     </div>
   );
 };
