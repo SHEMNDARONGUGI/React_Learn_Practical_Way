@@ -1,7 +1,28 @@
 import React from "react";
 
 const App = () => {
-  return <div></div>;
+  return (
+    <User
+      img="https://avatars.githubusercontent.com/u/152214765?s=400&u=7132302d4ff48feb57ddab656f63e12d0b087cd7&v=4"
+      name="Shem Ndaro Ngugi"
+      age={22}
+      isMarried={false}
+      hobbies={["coding", "reading", "cycling"]}
+    />
+  );
+};
+
+const User = (props) => {
+  console.log(props);
+  return (
+    <section>
+      <img src={props.img} alt={props.name} />
+      <h1>Name: {props.name}</h1>
+      <h2>Age: {props.age}</h2>
+      <h3>Is married: {props.isMarried}</h3>
+      <h4>Hobbies: {props.hobbies}</h4>
+    </section>
+  );
 };
 
 export default App;
