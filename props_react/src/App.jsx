@@ -1,14 +1,20 @@
 import React from "react";
+import Person from "./components/Person";
+import Product from "./components/Product";
 
 const App = () => {
   return (
-    <User
-      img="https://avatars.githubusercontent.com/u/152214765?s=400&u=7132302d4ff48feb57ddab656f63e12d0b087cd7&v=4"
-      name="Shem Ndaro Ngugi"
-      age={22}
-      isMarried={false}
-      hobbies={["coding", "reading", "cycling"]}
-    />
+    <div>
+      <User
+        img="https://avatars.githubusercontent.com/u/152214765?s=400&u=7132302d4ff48feb57ddab656f63e12d0b087cd7&v=4"
+        name="Shem Ndaro Ngugi"
+        age={22}
+        isMarried={false}
+        hobbies={["coding", "reading", "cycling"]}
+      />
+      <Person name="Scholastica" age={30} />
+      <Product name="Canon 70D" price="Ksh: 35,000" />
+    </div>
   );
 };
 
