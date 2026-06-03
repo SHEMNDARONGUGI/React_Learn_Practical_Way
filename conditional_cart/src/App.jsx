@@ -4,6 +4,14 @@ const Cart = () => {
     <div>
       <h1>Cart 🛒</h1>
       {items.length > 0 && <h2>You have {items.length} items in your cart</h2>}
+
+      <ul>
+        <h4>
+          {items.map((i) => (
+            <li key={Math.random()}>{i}</li>
+          ))}
+        </h4>
+      </ul>
     </div>
   );
 };
