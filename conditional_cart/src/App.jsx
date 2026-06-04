@@ -24,7 +24,7 @@ const App = () => {
   return (
     <div>
       <Cart />
-      <Greeting />
+      <Greeting timeOfDay="morning" />
       <Weather temperature={27} />
       <UserStatus loggedIn={true} isAdmin={true} />
     </div>
