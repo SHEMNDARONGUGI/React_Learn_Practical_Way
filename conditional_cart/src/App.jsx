@@ -25,8 +25,8 @@ const App = () => {
     <div>
       <Cart />
       <Greeting />
-      <Weather />
-      <UserStatus />
+      <Weather temperature={27} />
+      <UserStatus loggedIn={true} isAdmin={true} />
     </div>
   );
 };
