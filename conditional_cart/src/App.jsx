@@ -1,3 +1,7 @@
+import UserStatus from "./components/UserStatus";
+import Weather from "./components/Weather";
+import Greeting from "./components/Greeting";
+
 const Cart = () => {
   const items = ["Wireless Earbuds", "Power Bank", "New SSD", "Hoodie"];
   return (
@@ -17,7 +21,14 @@ const Cart = () => {
 };
 
 const App = () => {
-  return <Cart />;
+  return (
+    <div>
+      <Cart />
+      <Greeting />
+      <Weather />
+      <UserStatus />
+    </div>
+  );
 };
 
 export default App;

@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserStatus = () => {
+const UserStatus = ({ loggedIn, isAdmind }) => {
   return <div></div>;
 };
 
