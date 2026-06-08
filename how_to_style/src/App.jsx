@@ -1,4 +1,4 @@
-import React from "react";
+import "./index.css";
 
 const App = () => {
   // const styles = {
@@ -8,7 +8,8 @@ const App = () => {
   // };
   return (
     <section>
-      <h1 style={styles}>Inline Style</h1>
+      {/* <h1 style={styles}>Inline Style</h1> */}
+      <h1>Separate file for styling</h1>
     </section>
   );
 };
