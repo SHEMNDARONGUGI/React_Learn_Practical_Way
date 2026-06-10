@@ -5,6 +5,7 @@ import data from "./data";
 import StyledCard from "./components/StyledCard";
 import ProfileCard from "./components/ProfileCard";
 import profileData from "./profileData";
+import IconComponent from "./components/IconComponent";
 const App = () => {
   // const styles = {
   //   color: "red",
@@ -13,6 +14,7 @@ const App = () => {
   // };
   return (
     <section>
+      <IconComponent />
       {data.map((data, id) => (
         <StyledCard
           key={id}
