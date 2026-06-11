@@ -1,5 +1,3 @@
-import React from "react";
-
 const ProfileCard = ({ username, bio }) => {
   const styles = {
     backgroundColor: "lightgray",

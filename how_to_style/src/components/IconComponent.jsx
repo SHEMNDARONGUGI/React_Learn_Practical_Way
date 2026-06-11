@@ -4,7 +4,7 @@ export default function IconComponent() {
     <div>
       <h2>
         Download
-        <FaFileDownload style={{ fontSize: "30px", color: "gold" }} />
+        <FaFileDownload size={30} color="gold" />
       </h2>
     </div>
   );

@@ -6,7 +6,7 @@ const StyledCard = ({ title, description }) => {
         padding: "20px",
         margin: "20px",
         borderRadius: "10px",
-        textColor: "darkblue",
+        color: "darkblue",
       }}
     >
       <h1>{title}</h1>
