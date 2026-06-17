@@ -1,6 +1,7 @@
 const Button = ({ style }) => {
+  const handleClick = () => console.log(Math.round(Math.random() * 10));
   return (
-    <button onClick={() => console.log("You clicked me")} style={style}>
+    <button onClick={handleClick} style={style}>
       Click
     </button>
   );
