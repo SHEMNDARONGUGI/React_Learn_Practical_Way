@@ -1,3 +1,18 @@
+const Move = () => {
+  const moveHandler = () => {
+    alert("Mouse move event fired");
+    console.warn("Mouse move event fired");
+  };
+  return (
+    <p onMouseMove={moveHandler}>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque odio
+      maiores unde, nobis expedita debitis dicta nam rerum officia ipsum, quas
+      quam voluptas asperiores aliquam repellendus adipisci architecto!
+      Cupiditate, accusantium.
+    </p>
+  );
+};
+
 const Button = ({ style }) => {
   const handleClick = () => console.log(Math.round(Math.random() * 10));
   return (
@@ -31,6 +46,8 @@ const App = () => {
         }}
       />
       <Copy />
+
+      <Move />
     </section>
   );
 };
