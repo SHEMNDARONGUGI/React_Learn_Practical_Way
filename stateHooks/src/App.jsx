@@ -1,19 +1,34 @@
 import { useState } from "react";
 
 const App = () => {
-  const [movie, setMovie] = useState({
-    title: "Chinese Zodiac",
-    ratings: 7,
-  });
+  // useState working with an array of objects
+
+  const [movies, setMovies] = useState([
+    { id: 1, title: "Spider Man", ratings: 3 },
+    { id: 2, title: "Superman", ratings: 6 },
+  ]);
 
   const handleClick = () => {
-    // const copyMovie = {
-    //   ...movie,
-    //   ratings: 5,
-    // };
-
-    setMovie({ ...movie, ratings: 5 });
+    setMovies(
+      movies.map((m) =>
+        m.id === 1 ? { ...movies, title: "Transformers 5" } : m,
+      ),
+    );
   };
+
+  // const [movie, setMovie] = useState({
+  //   title: "Chinese Zodiac",
+  //   ratings: 7,
+  // });
+
+  // const handleClick = () => {
+  // const copyMovie = {
+  //   ...movie,
+  //   ratings: 5,
+  // };
+
+  //   setMovie({ ...movie, ratings: 5 });
+  // };
   // const [count, setCount] = useState(0);
   // console.log(count);
   // const increment = () => setCount(count + 1);
@@ -32,15 +47,20 @@ const App = () => {
 
   return (
     <section>
-      <h1>Title: {movie.title}</h1>
+      {/* working with an array of objects with useState */}
+      {movies.map((m, id) => (
+        <li key={id}>{m.title}</li>
+      ))}
+
+      <button onClick={handleClick}>Change Name</button>
+
+      {/* <h1>Title: {movie.title}</h1>
       <p>ratings: {movie.ratings}</p>
 
-      <button onClick={handleClick}>Change Rating</button>
-
+      <button onClick={handleClick}>Change Rating</button> */}
       {/* <h1>{count}</h1>
       <button onClick={increment}>+</button>
       <button onClick={decrement}>-</button> */}
-
       {/* <ul>
         {friends.map((f, id) => (
           <li key={id}>{f}</li>
