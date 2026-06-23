@@ -3,18 +3,18 @@ import { useState } from "react";
 const App = () => {
   // useState working with an array of objects
 
-  const [movies, setMovies] = useState([
-    { id: 1, title: "Spider Man", ratings: 3 },
-    { id: 2, title: "Superman", ratings: 6 },
-  ]);
+  // const [movies, setMovies] = useState([
+  //   { id: 1, title: "Spider Man", ratings: 3 },
+  //   { id: 2, title: "Superman", ratings: 6 },
+  // ]);
 
-  const handleClick = () => {
-    setMovies(
-      movies.map((m) =>
-        m.id === 1 ? { ...movies, title: "Transformers 5" } : m,
-      ),
-    );
-  };
+  // const handleClick = () => {
+  //   setMovies(
+  //     movies.map((m) =>
+  //       m.id === 1 ? { ...movies, title: "Transformers 5" } : m,
+  //     ),
+  //   );
+  // };
 
   // const [movie, setMovie] = useState({
   //   title: "Chinese Zodiac",
@@ -48,11 +48,11 @@ const App = () => {
   return (
     <section>
       {/* working with an array of objects with useState */}
-      {movies.map((m, id) => (
+      {/* {movies.map((m, id) => (
         <li key={id}>{m.title}</li>
       ))}
 
-      <button onClick={handleClick}>Change Name</button>
+      <button onClick={handleClick}>Change Name</button> */}
 
       {/* <h1>Title: {movie.title}</h1>
       <p>ratings: {movie.ratings}</p>
