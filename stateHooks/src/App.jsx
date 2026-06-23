@@ -1,6 +1,11 @@
 import { useState } from "react";
+import ComponentOne from "./components/ComponentOne";
+import ComponentTwo from "./components/ComponentTwo";
 
 const App = () => {
+  //Sharing states into other components
+  const [count, setCount] = useState(0);
+
   // useState working with an array of objects
 
   // const [movies, setMovies] = useState([
@@ -47,6 +52,8 @@ const App = () => {
 
   return (
     <section>
+      <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} />
+      <ComponentTwo count={count} onClickHandler={() => setCount(count - 1)} />
       {/* working with an array of objects with useState */}
       {/* {movies.map((m, id) => (
         <li key={id}>{m.title}</li>
