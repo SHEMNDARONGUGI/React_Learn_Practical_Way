@@ -1,6 +1,7 @@
 import { useState } from "react";
 import ComponentOne from "./components/ComponentOne";
 import ComponentTwo from "./components/ComponentTwo";
+import ExampleOne from "./components/ExampleOne";
 
 const App = () => {
   //Sharing states into other components
@@ -52,6 +53,9 @@ const App = () => {
 
   return (
     <section>
+      {/* passing arrow functions as initial value for our useStates */}
+      <ExampleOne />
+
       {/* <ComponentOne count={count} onClickHandler={() => setCount(count + 1)} />
       <ComponentTwo count={count} onClickHandler={() => setCount(count - 1)} /> */}
       {/* working with an array of objects with useState */}
@@ -60,7 +64,6 @@ const App = () => {
       ))}
 
       <button onClick={handleClick}>Change Name</button> */}
-
       {/* <h1>Title: {movie.title}</h1>
       <p>ratings: {movie.ratings}</p>
 
