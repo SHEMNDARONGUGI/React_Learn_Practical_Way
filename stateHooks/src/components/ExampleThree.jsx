@@ -18,7 +18,7 @@ function ExampleThree() {
   return (
     <div>
       <h1>Your Name: {name}</h1>
-      <input type="text" value={name} onChange={handleChange} place />
+      <input type="text" value={name} onChange={handleChange} placeholder="type name..." />
       <button onClick={handleClear}>Clear Name</button>
     </div>
   );
