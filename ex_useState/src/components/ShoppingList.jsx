@@ -1,29 +1,72 @@
 import { useState } from "react";
 
 function ShoppingList() {
-  const [quantity, setQuantity] = useState(0);
+  const [items, setItems] = useState([]);
   const [name, setName] = useState("");
+  const [quantity, setQuantity] = useState("");
 
-  const [shoppingList, setShoppingList] = useState([{}]);
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!name || !quantity) return;
 
-  const updateShoppingList = () => {
-    if (!name.trim() || quantity <= 0) return alert("Invalid Input");
-    setShoppingList([
-      ...shoppingList,
-      {
-        name: name,
-        quantity: quantity,
-      },
-    ]);
+    const newItem = {
+      name,
+      quantity: parseInt(quantity),
+    };
+
+    setItems((prevItems) => [...prevItems, newItem]);
     setName("");
-    setQuantity(0);
+    setQuantity("");
   };
+  // const [quantity, setQuantity] = useState(0);
+  // const [name, setName] = useState("");
 
-  console.log(shoppingList);
+  // const [shoppingList, setShoppingList] = useState([{}]);
+
+  // const updateShoppingList = () => {
+  //   if (!name.trim() || quantity <= 0) return alert("Invalid Input");
+  //   setShoppingList([
+  //     ...shoppingList,
+  //     {
+  //       name: name,
+  //       quantity: quantity,
+  //     },
+  //   ]);
+  //   setName("");
+  //   setQuantity(0);
+  // };
+
+  // console.log(shoppingList);
 
   return (
     <div>
-      <input
+      <h1>Shopping List</h1>
+      <form onSubmit={handleSubmit}>
+        <input
+          type="text"
+          placeholder="Item name"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+        />
+
+        <input
+          type="number"
+          placeholder="Quantity"
+          value={quantity}
+          onChange={(e) => setQuantity(e.target.value)}
+        />
+
+        <button type="submit">Add Item</button>
+      </form>
+
+      <ul>
+        {items.map((item, index) => (
+          <li key={index}>
+            {item.name} - Qty: {item.quantity}
+          </li>
+        ))}
+      </ul>
+      {/* <input
         type="text"
         placeholder="name"
         value={name}
@@ -54,7 +97,7 @@ function ShoppingList() {
             </tr>
           ))}
         </tbody>
-      </table>
+      </table> */}
     </div>
   );
 }
