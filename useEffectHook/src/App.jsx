@@ -5,23 +5,46 @@
 import { useState, useEffect } from "react";
 
 export default function App() {
-  const [value, setValue] = useState(0);
-  const [something, setSomething] = useState(0);
+  // useEffect example for data fetching
+  const [data, setData] = useState([]);
 
+  // site used https://jsonplaceholder.typicode.com/
   useEffect(() => {
-    if (value > 0) {
-      console.log("call useEffect");
-      document.title = `Increment ${value}`;
+    async function getData() {
+      const res = await fetch("https://jsonplaceholder.typicode.com/posts");
+      const data = await res.json();
+      if (data && data.length) setData(data);
     }
-    // [] is known as empty dependency array
-  }, [value]);
+
+    getData();
+  }, []);
+  // const [value, setValue] = useState(0);
+  // const [something, setSomething] = useState(0);
+
+  // useEffect(() => {
+  //   if (value > 0) {
+  //     console.log("call useEffect");
+  //     document.title = `Increment ${value}`;
+  //   }
+  // [] is known as empty dependency array
+  // }, [value]);
   return (
     <div>
-      <h2>{value}</h2>
+      <ol>
+        {data.map((todo) => (
+          <li key={todo.id}>
+            userId: {todo.userId} - Title: {todo.title} <br />
+            <strong>Body</strong>
+            <br />
+            {todo.body}
+          </li>
+        ))}
+      </ol>
+      {/* <h2>{value}</h2>
       <button onClick={() => setValue(value + 1)}>Click Me</button>
       <button onClick={() => setSomething(value + 1)}>
         Increment by Something
-      </button>
+      </button> */}
     </div>
   );
 }
