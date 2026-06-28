@@ -3,6 +3,9 @@
 // & whenever it re-renders
 // & some data in our component changed
 import { useState, useEffect } from "react";
+import BasicEffect from "./components/BasicEffect";
+import CounterEffect from "./components/CounterEffect";
+import FetchDataEffect from "./components/FetchDataEffect";
 
 export default function App() {
   // useEffect example for data fetching
@@ -30,6 +33,14 @@ export default function App() {
   // }, [value]);
   return (
     <div>
+      {/*EXERCISE ONE FROM THE ASSIGNMENT */}
+      <BasicEffect />
+
+      {/*EXERCISE TWO FROM THE ASSIGNMENT */}
+      <CounterEffect />
+
+      {/*EXERCISE THREE FROM THE ASSIGNMENT */}
+      <FetchDataEffect />
       <ol>
         {data.map((todo) => (
           <li key={todo.id}>
