@@ -14,9 +14,12 @@ function FetchDataEffect() {
   }, []);
   return (
     <div>
-      <h1>Data Fetching</h1>
+      <h1>First Post Title</h1>
       {/* ?. is known as //OPTIONAL CHAINING */}
       <p>{data[0]?.title}</p>
+
+      {/* solution from the class */}
+      {data.length > 0 ? <p>{data[0].title}</p> : <p>Loading...</p>}
     </div>
   );
 }
