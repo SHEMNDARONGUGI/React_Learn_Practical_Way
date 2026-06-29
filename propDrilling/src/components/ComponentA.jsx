@@ -1,9 +1,9 @@
 import ComponentB from "./ComponentB";
 
-function ComponentA({ name }) {
+function ComponentA() {
   return (
     <div>
-      <ComponentB name={name} />
+      <ComponentB />
     </div>
   );
 }

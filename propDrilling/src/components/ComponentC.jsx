@@ -1,8 +1,24 @@
-function ComponentC({ name }) {
+import { Data, Data1 } from "../App";
+
+function ComponentC() {
   return (
-    <div>
-      <p>{name}</p>
-    </div>
+    <Data.Consumer>
+      {(name) => {
+        // return <h1>{name}</h1>;
+
+        return (
+          <Data1.Consumer>
+            {(age) => {
+              return (
+                <h1>
+                  My name is {name} and I am {age} years old.
+                </h1>
+              );
+            }}
+          </Data1.Consumer>
+        );
+      }}
+    </Data.Consumer>
   );
 }
 
