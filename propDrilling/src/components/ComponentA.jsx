@@ -3,7 +3,7 @@ import ComponentB from "./ComponentB";
 function ComponentA({ name }) {
   return (
     <div>
-      <ComponentB name="name" />
+      <ComponentB name={name} />
     </div>
   );
 }

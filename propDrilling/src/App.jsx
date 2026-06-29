@@ -1,4 +1,5 @@
 import ComponentA from "./components/ComponentA";
+import ComponentC from "./components/ComponentC";
 
 const App = () => {
   const name = "Shem";
