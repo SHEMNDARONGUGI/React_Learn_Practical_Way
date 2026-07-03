@@ -1,5 +1,6 @@
 import { useRef } from "react";
 import FocusInput from "./components/FocusInput";
+import Timer from "./components/Timer";
 
 const App = () => {
   // const inputElement = useRef(null);
@@ -8,7 +9,11 @@ const App = () => {
   //   inputElement.current.value = "Shem";
   // };
   return (
-    <FocusInput />
+    <div>
+      <FocusInput />
+      <Timer />
+    </div>
+
     // <div>
     //   <input type="text" ref={inputElement} />
     //   <button onClick={() => focusInput()}>Focus and Write Shem</button>
