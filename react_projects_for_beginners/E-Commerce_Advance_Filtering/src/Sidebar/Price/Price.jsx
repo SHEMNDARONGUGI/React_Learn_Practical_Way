@@ -15,7 +15,6 @@ export default function Price() {
       </label>
 
       <label className="sidebar-label-container">
-        $0 - $20
         <input type="radio" name="test2" />
         <span className="checkmark"></span>$50 - $100
       </label>
