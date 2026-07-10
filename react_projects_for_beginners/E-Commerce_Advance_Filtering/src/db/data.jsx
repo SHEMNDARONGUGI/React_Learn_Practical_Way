@@ -12,6 +12,7 @@ const data = [
     color: "white",
     category: "sneakers",
   },
+  
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
     title: "Nike Air Vapormax Plus",
@@ -35,6 +36,7 @@ const data = [
     color: "green",
     category: "sneakers",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71oEKkghg-L._AC_UX575_.jpg",
     title: "Nike Running Shoe",
@@ -46,6 +48,7 @@ const data = [
     color: "black",
     category: "sneakers",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/41M54ztS6IL._AC_SY625._SX._UX._SY._UY_.jpg",
     title: "Flat Slip On Pumps",
@@ -57,6 +60,7 @@ const data = [
     color: "green",
     category: "flats",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71zKuNICJAL._AC_UX625_.jpg",
     title: "Knit Ballet Flat",
@@ -116,6 +120,7 @@ const data = [
     color: "green",
     category: "sneakers",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71E75yRwCDL._AC_UY575_.jpg",
     title: "Pacer Future Sneaker",
@@ -138,6 +143,7 @@ const data = [
     color: "black",
     category: "sneakers",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/61TM6Q9dvxL._AC_UX575_.jpg",
     title: "Roma Basic Sneaker",
@@ -149,6 +155,7 @@ const data = [
     color: "white",
     category: "sneakers",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/7128-af7joL._AC_UY575_.jpg",
     title: "Pacer Future Doubleknit",
@@ -172,6 +179,7 @@ const data = [
     color: "green",
     category: "sneakers",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/719gdz8lsTS._AC_UX575_.jpg",
     title: "Rainbow Chex Skate",
@@ -183,6 +191,7 @@ const data = [
     color: "red",
     category: "flats",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71gpFHJlnoL._AC_UX575_.jpg",
     title: "Low-Top Trainers",
@@ -194,6 +203,7 @@ const data = [
     color: "white",
     category: "sandals",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71pf7VFs9CL._AC_UX575_.jpg",
     title: "Vans Unisex Low-Top",
@@ -205,6 +215,7 @@ const data = [
     color: "blue",
     category: "sandals",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/61N4GyWcHPL._AC_UY575_.jpg",
     title: "Classic Bandana Sneakers",
@@ -216,6 +227,7 @@ const data = [
     color: "black",
     category: "sandals",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/61bncQ44yML._AC_UX695_.jpg",
     title: "Chunky High Heel",
@@ -227,6 +239,7 @@ const data = [
     color: "black",
     category: "heels",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71czu7WgGuL._AC_UY695_.jpg",
     title: "Slip On Stiletto High Heel",
@@ -238,6 +251,7 @@ const data = [
     color: "black",
     category: "heels",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/61men05KRxL._AC_UY625_.jpg",
     title: "DREAM PAIRS Court Shoes",
@@ -249,6 +263,7 @@ const data = [
     color: "red",
     category: "heels",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/519MRhRKGFL._AC_UX575_.jpg",
     title: "Nike Air Vapormax Plus",
@@ -272,6 +287,7 @@ const data = [
     color: "black",
     category: "heels",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/616sA5XUKtL._AC_UY675_.jpg",
     title: "Chunky High Heel",
@@ -283,6 +299,7 @@ const data = [
     color: "black",
     category: "heels",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71h5+MbEK7L._AC_UY625_.jpg",
     title: "Amore Fashion Stilettos",
@@ -294,6 +311,7 @@ const data = [
     color: "white",
     category: "heels",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/61uw5RDxKQL._AC_UY625_.jpg",
     title: "Bridal Sandals Glitter",
@@ -305,6 +323,7 @@ const data = [
     color: "black",
     category: "heels",
   },
+
   {
     img: "https://m.media-amazon.com/images/I/71yhoZP0l6L._AC_UY695_.jpg",
     title: "Wedding Prom Bridal",
