@@ -1,3 +1,4 @@
+// Typescript annotations
 type Person = {
   name: string;
 };
