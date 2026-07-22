@@ -9,5 +9,7 @@ class Person {
 }
 
 const person = new Person("Shem", 21);
-const person2 = new Person("Mercy", 20);
+const person2 = new Person("Nicoletah", 20);
+
 console.log(person);
+console.log(person2);
