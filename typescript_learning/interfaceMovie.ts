@@ -27,3 +27,38 @@ console.log(add(78, 79));
 
 const subtract: MathOperation = (a, b) => a - b;
 console.log(subtract(1782, 79));
+
+//Methods inside of interface
+console.log("\nMethods inside of interface");
+interface Person {
+  firstName: string;
+  lastName: string;
+  age: number;
+  sayHello(): void;
+}
+
+function greet(person: Person) {
+  console.log(`Hello, ${person.firstName} ${person.lastName}`);
+  person.sayHello();
+}
+
+const Steve: Person = {
+  firstName: "Steve",
+  lastName: "Mwangi",
+  age: 30,
+  sayHello() {
+    console.log("Hello there");
+  },
+};
+
+const Caleb: Person = {
+  firstName: "Caleb",
+  lastName: "Maina",
+  age: 32,
+  sayHello() {
+    console.log("What's Popping");
+  },
+};
+
+greet(Steve);
+greet(Caleb);
