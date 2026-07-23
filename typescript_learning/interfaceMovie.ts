@@ -47,7 +47,7 @@ const Steve: Person = {
   lastName: "Mwangi",
   age: 30,
   sayHello() {
-    console.log("Hello there");
+    console.log("Welcome");
   },
 };
 
