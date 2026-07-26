@@ -30,10 +30,22 @@ function printValue<T>(item: T, defaultValue: T): [T, T] {
   return [item, defaultValue];
 }
 
-const numValue = printValue<number>(10, 20);
-const strValue = printValue<string>("C++", "C#");
-const boolValue = printValue<boolean>(false, true);
+// const numValue = printValue<number>(10, 20);
+// const strValue = printValue<string>("C++", "C#");
+// const boolValue = printValue<boolean>(false, true);
 
-console.log(numValue);
-console.log(strValue);
-console.log(boolValue);
+// console.log(numValue);
+// console.log(strValue);
+// console.log(boolValue);
+
+interface Dog {
+  name: string;
+  breed: string;
+}
+
+const dog1 = printValue<Dog>(
+  { name: "Bailey", breed: "Labrador" },
+  { name: "Phoebe", breed: "Huskey" },
+);
+
+console.log(dog1);
