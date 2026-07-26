@@ -10,3 +10,21 @@ console.log(evenNumbers);
 const stringArr = ["apple", "banana", "cherry", "date"];
 const shortWords = filterArray<string>(stringArr, (word) => word.length < 6);
 console.log(shortWords);
+
+interface Fruit {
+  name: string;
+  color: string;
+}
+
+const fruitArray: Fruit[] = [
+  { name: "Apple", color: "Red" },
+  { name: "Banana", color: "Yellow" },
+  { name: "Cherry", color: "Red" },
+];
+
+const redFruits = filterArray<Fruit>(
+  fruitArray,
+  (fruit) => fruit.color === "Red",
+);
+
+console.log(redFruits);
