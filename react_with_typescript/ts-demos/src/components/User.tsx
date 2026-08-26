@@ -1,19 +1,17 @@
-// type UserShape = {
-//   name: string;
-//   age: number;
-//   isStudent: boolean;
-// };
+import type { FC } from "react";
 
-import type { ReactNode } from "react";
+type UserShape = {
+  name: string;
+  age: number;
+  isStudent: boolean;
+};
 
-interface UserShape {
-  children: ReactNode;
-}
-
-const User = ({ children }: UserShape) => {
+const User: FC<UserShape> = ({ name, age, isStudent }) => {
   return (
     <div>
-      <h1>{children}</h1>
+      <h1>{name}</h1>
+      <p>{age}</p>
+      <h1>{isStudent}</h1>
     </div>
   );
 };
