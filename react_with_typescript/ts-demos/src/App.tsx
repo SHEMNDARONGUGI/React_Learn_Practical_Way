@@ -3,10 +3,26 @@ import Button from "./components/Button";
 import User from "./components/User";
 import UserInfo from "./components/UserInfo";
 import AdminInfo from "./components/AdminInfo";
+
+import type { Info, AdminInfoList } from "./types";
 const App = () => {
   const [count, setCount] = useState(0);
 
   const addCount = () => setCount(count + 1);
+
+  const user: Info = {
+    id: 1,
+    name: "John Doe",
+    email: "john@gmail.com",
+  };
+
+  const admin: AdminInfoList = {
+    id: 2,
+    name: "Jane Doe",
+    email: "jane@gmail.com",
+    role: "admin",
+    lastLogin: new Date(),
+  };
   return (
     <div>
       <User name="Shem" age={20} isStudent={true} />
@@ -17,16 +33,9 @@ const App = () => {
 
       <h2>{count}</h2>
 
-      <UserInfo id="P001" name="Stephenson" email="stephenson@gmail.com" />
+      <UserInfo user={user} />
 
-      <AdminInfo
-        adminId="SX001"
-        name="Shem Ndaro Ngugi"
-        email="admin@shemtechnologies.gmail.com"
-        phoneNo="0711221133"
-        role="IT Manager"
-        isActive={true}
-      />
+      <AdminInfo admin={admin} />
     </div>
   );
 };
