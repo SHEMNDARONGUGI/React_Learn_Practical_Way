@@ -1,4 +1,4 @@
-import { useRef, useState, type FormEvent } from "react";
+import { useRef, useState, type ChangeEvent, type FormEvent } from "react";
 
 interface formDetails {
   name: string;
@@ -15,86 +15,68 @@ const ContactForm = () => {
     message: "",
   });
 
-  const name = useRef<HTMLInputElement>(null);
-  const email = useRef<HTMLInputElement>(null);
-  const subject = useRef<HTMLInputElement>(null);
-  const message = useRef<HTMLInputElement>(null);
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+    setFormData((prevState) => ({ ...prevState, [name]: value }));
+  };
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-
-    const nameValue = name.current!.value;
-    const emailValue = email.current!.value;
-    const subjectValue = subject.current!.value;
-    const messageValue = message.current!.value;
-
-    setFormData({
-      name: nameValue,
-      email: emailValue,
-      subject: subjectValue,
-      message: messageValue,
-    });
+    console.log("Form Submitted ", formData);
   };
 
   return (
     <form onSubmit={handleSubmit}>
       <legend style={{ textAlign: "center" }}>Contact Form</legend>
-      <div style={{ display: "flex", backgroundColor: "gray" }}>
-        <div>
+      <div>
+        <label>
+          Name:
           <input
             type="text"
-            placeholder="Input name"
-            ref={name}
-            style={{ margin: "20px", width: "100%" }}
+            name="name"
+            value={formData.name}
+            onChange={handleChange}
           />
-          <br />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Email:
           <input
             type="email"
-            placeholder="Input email"
-            ref={email}
-            style={{ margin: "20px", width: "100%" }}
+            name="email"
+            value={formData.email}
+            onChange={handleChange}
           />
-          <br />
-          <input
-            type="text"
-            placeholder="Input subject"
-            ref={subject}
-            max={20}
-            style={{ margin: "20px", width: "100%" }}
-          />
-          <br />
-          <input
-            type="text"
-            placeholder="Input message"
-            ref={message}
-            style={{ margin: "20px", width: "100%" }}
-          />
-          <br />
-
-          <button type="submit" style={{ margin: "20px" }}>
-            Submit
-          </button>
-        </div>
-
-        <div style={{ margin: "auto", fontFamily: "sans-serif" }}>
-          <h3 style={{ color: "white" }}>Contact Details</h3>
-          <p>
-            Name:{" "}
-            <span style={{ fontWeight: "bold", color: "white" }}>
-              {formData.name}
-            </span>
-          </p>
-          <p>
-            Email: <span style={{ color: "white" }}>{formData.email}</span>
-          </p>
-          <p>
-            Subject: <span style={{ color: "white" }}>{formData.subject}</span>
-          </p>
-          <p>
-            Message: <span style={{ color: "white" }}>{formData.message}</span>
-          </p>
-        </div>
+        </label>
       </div>
+
+      <div>
+        <label>
+          Subject:
+          <input
+            type="text"
+            name="subject"
+            value={formData.subject}
+            onChange={handleChange}
+          />
+        </label>
+      </div>
+
+      <div>
+        <label>
+          Message:
+          <input
+            type="text"
+            name="message"
+            value={formData.message}
+            onChange={handleChange}
+          />
+        </label>
+      </div>
+
+      <button type="submit">Submit</button>
     </form>
   );
 };
